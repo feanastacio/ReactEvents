@@ -7,6 +7,8 @@ const apiPorta = "5289";
 // Monta a URL base da API local usando a porta definida
 const apiLocal = `http://localhost:${apiPorta}/api/`;
 
+const apiAzure = "https://apieventfernanda-f2byasbmg0gkc5cn.brazilsouth-01.azurewebsites.net/api/";
+
 // Cria uma instância do Axios já configurada com a URL base da API
 const api = axios.create({
     baseURL: apiLocal
