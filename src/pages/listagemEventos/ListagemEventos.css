@@ -1,0 +1,157 @@
+/* ListagemEventos.css */
+
+.select_evento {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none;
+    padding: 0 5px;
+    width: 355px;
+    height: 30px;
+    margin-bottom: 60px;
+    color: #201849;
+    display: flex;
+    background-color: #FFF8DC;
+}
+
+.listagem_evento {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #FFF8DC;
+    color: black;
+}
+
+.listagem_evento h1 {
+    text-transform: uppercase;
+    color: black;
+    font-size: 19px;
+}
+
+.listagem_evento hr {
+    max-width: 200px;
+    width: 100%;
+    border-style: solid;
+    border-top-width: 1px;
+    border-color: #30706F;
+    margin-top: 5px;
+    color: white;
+}
+
+.tabela_evento {
+    width: 80%;
+    margin-top: 40px;
+    text-align: center;
+    /* border-bottom: 1px solid #201849; */
+    margin-left: -60px;
+}
+
+.tabela_evento .table_evento :first-child {
+    width: 300px;
+}
+
+.tabela_evento .table_evento :nth-child(2) {
+    text-align: start;
+}
+
+.tabela_evento .table_evento th {
+    border-bottom: 2px solid #30706F;
+    width: 174px;
+    margin-top: 40px;
+}
+
+.item_evento td {
+    padding: 20px 5px 20px;
+    border-bottom: #201849 1px solid;
+}
+
+.tabela_evento .item_evento :nth-child(2) {
+    text-align: start;
+}
+
+
+.listagem_evento td button {
+    /* Garante que o fundo seja transparente, anulando estilos padrão do navegador */
+    background: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    /* Define o cursor para indicar que é clicável */
+    cursor: pointer; 
+    /* Faz o botão se comportar como um elemento de bloco mas ainda inline com o texto */
+    display: inline-block; /* Otimizado para elementos dentro de tabelas */
+    font-size: 0;
+    line-height: 0;
+}
+
+
+.listagem_evento td button img {
+    display: block; 
+    max-width: 24px; 
+    height: auto; 
+  
+   
+    margin: 0 auto;
+}
+
+/* Estilo glassmorphic para o popup do SweetAlert */
+.glassmorphic-popup {
+  background: rgba(255, 255, 255, 0.25) !important;
+  border-radius: 15px !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  font-family: 'Poppins', sans-serif;
+  color: #333 !important;
+  padding: 2rem !important;
+  max-width: 400px;
+}
+
+/* Botão confirmar estilizado */
+.swal2-confirm {
+  background-color: #11998e !important;
+  color: white !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 8px !important;
+  transition: background-color 0.3s ease;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(17, 153, 142, 0.5);
+}
+.swal2-confirm:hover {
+  background-color: #0f7c6c !important;
+}
+
+/* Animação para o título (pulse glow) */
+@keyframes pulseGlow {
+  0% {
+    text-shadow:
+      0 0 5px #38ef7d,
+      0 0 10px #38ef7d,
+      0 0 20px #38ef7d,
+      0 0 40px #11998e;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #38ef7d,
+      0 0 20px #38ef7d,
+      0 0 30px #11998e,
+      0 0 60px #11998e;
+  }
+}
+
+/* Animação leve de flutuação para o SVG */
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

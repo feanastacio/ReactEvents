@@ -1,0 +1,168 @@
+.listagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  background-color: #30706F;
+  color: white;
+}
+
+.listagem h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 19px;
+  margin: 0;
+}
+
+.listagem hr {
+  max-width: 200px;
+  width: 100%;
+  border-style: solid;
+  border-top-width: 1px;
+  border-color: white;
+  margin-top: 5px;
+  color: white;
+}
+
+.tabela {
+  width: 80%;
+  margin-top: 40px;
+  border-collapse: collapse;
+  color: white;
+}
+
+.tabela th,
+.tabela td {
+  border-bottom: 1px solid white;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+.tabela th:first-child,
+.tabela td:first-child {
+  text-align: left;
+  width: 300px;
+}
+
+.tabela th:nth-child(2),
+.tabela td:nth-child(2) {
+  width: 150px;
+  text-align: center;
+}
+
+.tabela th:nth-child(3),
+.tabela td:nth-child(3) {
+  width: 150px;
+}
+
+.tabela th,
+.tabela td {
+  font-size: 16px;
+}
+
+.item_lista img {
+  height: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .tabela {
+    width: 95%;
+  }
+
+  .tabela th,
+  .tabela td {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .listagem {
+    padding: 30px 10px;
+  }
+
+  .listagem h1 {
+    font-size: 17px;
+  }
+
+  .listagem hr {
+    max-width: 150px;
+  }
+
+  .tabela {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .tabela thead,
+  .tabela tbody,
+  .tabela tr,
+  .tabela th,
+  .tabela td {
+    display: block;
+  }
+
+  .tabela thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .tabela tr {
+    border: 1px solid white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .tabela td {
+    border: none;
+    border-bottom: 1px solid white;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .tabela td:last-child {
+    border-bottom: none;
+  }
+
+  .tabela td::before {
+    content: attr(data-cell);
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  .item_lista img {
+    height: 22px;
+    margin-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .listagem h1 {
+    font-size: 15px;
+  }
+
+  .tabela td {
+    font-size: 13px;
+    padding-left: 45%;
+  }
+
+  .tabela td::before {
+    left: 10px;
+    font-size: 13px;
+  }
+}
